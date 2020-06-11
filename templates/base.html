@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{judul}}</title>
+    {% include "snippets/styles.html" %}
+    {% block app_css %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+    {% endblock app_css %}
+</head>
+<body>
+    {% include "snippets/navbar.html" %}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-white text-center">
+            {% block header %}
+
+            {% endblock header %}
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container bg-white text-dark shadow" style="margin-top: -100px;">
+            {% block content %}
+                <div class="row" style="height: 800px;" id="myFirst">
+                    This is the first kontol.
+                </div>
+            {% endblock content %}
+        </div>
+    </div>
+
+    {% include "snippets/scripts.html" %}
+</body>
+</html>

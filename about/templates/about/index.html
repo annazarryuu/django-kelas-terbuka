@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block app_css %}
+    <link rel="stylesheet" type="text/css" href="{% static app_css %}">
+{% endblock app_css %}
+
+{% block header %}
+    <h1 class="display-4 text-left" style="margin-top: 100px;">{{judul}}</h1>
+    <p class="lead text-left">{{sub_judul}}</p>
+{% endblock header %}
+
+{% block content %}
+    <div class="row" style="height: 800px;" id="myFirst">
+        This is the first content.
+    </div>
+{% endblock content %}
